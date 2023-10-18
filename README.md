@@ -12,7 +12,7 @@ curl -s https://warui.intaa.net/adhosts/hosts.txt | sed -E "s/(0.0.0.0) (.*)$/ad
 ```
 
 ```
-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
+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
 ```
 
 ```
