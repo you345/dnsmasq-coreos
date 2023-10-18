@@ -1,0 +1,17 @@
+version: '3'
+services:
+  dnsmasq:
+    restart: always
+    image: 4km3/dnsmasq
+    container_name: dnsmasq
+    ports:
+      - 192.168.3.1:53:53/udp  # ポート転送設定だけConflictが出てしまったのでQNAP自体のIPを明示。自分のQNAPのIPへ変更すること
+      - 192.168.3.1:53:53/tcp
+    volumes:
+      - "./dnsmasq.d:/etc/dnsmasq.d"
+      - "./log:/var/log"                                 # ログをとるためのDIRを作る
+      - "/usr/share/zoneinfo/Asia/Tokyo:/etc/localtime"  # ログ用のTimezoneを設定
+    dns:
+      - 192.168.2.21
+    cap_add:
+      - NET_ADMIN
