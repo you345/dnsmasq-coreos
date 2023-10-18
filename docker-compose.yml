@@ -8,8 +8,8 @@ services:
       - 192.168.3.1:53:53/udp  # ポート転送設定だけConflictが出てしまったのでQNAP自体のIPを明示。自分のQNAPのIPへ変更すること
       - 192.168.3.1:53:53/tcp
     volumes:
-      - "./dnsmasq.d:/etc/dnsmasq.d"
-      - "./log:/var/log"                                 # ログをとるためのDIRを作る
+      - "./dnsmasq.d:/etc/dnsmasq.d:z"
+      - "./log:/var/log:z"                                 # ログをとるためのDIRを作る
       - "/usr/share/zoneinfo/Asia/Tokyo:/etc/localtime"  # ログ用のTimezoneを設定
     dns:
       - 192.168.2.21
