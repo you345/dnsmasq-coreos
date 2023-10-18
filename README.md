@@ -12,5 +12,9 @@ curl -s https://warui.intaa.net/adhosts/hosts.txt | sed -E "s/(0.0.0.0) (.*)$/ad
 ```
 
 ```
-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
+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
+```
+
+```
+sudo docker-compose up -d
 ```
