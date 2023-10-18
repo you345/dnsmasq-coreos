@@ -10,3 +10,7 @@ Settings/Developer Settings -> ここで、パーソナルトークンの発行�
 たまにファイル更新のため実行が必要
 curl -s https://warui.intaa.net/adhosts/hosts.txt | sed -E "s/(0.0.0.0) (.*)$/address=\/\2\/\1/" > ./dnsmasq.d/adblock.conf
 ```
+
+```
+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
+```
